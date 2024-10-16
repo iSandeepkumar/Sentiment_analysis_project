@@ -1,0 +1,44 @@
+{% load static %}
+<html>
+<head>
+<title>Sentiment Analysis using Machine Learning</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1>Sentiment Analysis using Machine Learning</h1>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+      <li><a href="{% url 'Upload' %}">Upload</a></li>
+      <li><a href="{% url 'kmeanssvm' %}">Kmeans & SVM</a></li>
+      <li><a href="{% url 'knnkmeans' %}">KNN & KMeans</a></li>
+	  <li><a href="{% url 'nbcnn' %}">Naive Bayes & CNN</a></li>
+	  <li><a href="{% url 'TestSentiment' %}">Test Sentiment</a></li>
+      <li><a href="{% url 'index' %}">Logout</a></li>
+   </ul>
+		<br class="clearfix" />
+	</div>
+	<div id="splash">
+		<img class="pic" src="{% static 'images/investor.JPG' %}" width="870" height="230" alt="" />
+	</div>
+	<br/>
+	 <center><font face="verdana" color="red">{{ data|safe }}</font></center>
+	 <br/>
+	<p align="justify"><font size="3" style="font-family: Comic Sans MS">
+	Abstract-Sentiment Analysis using Machine Learning
+	</p>
+	<p>1. Support Vector Machine</p>
+	<p>2. KMEANS</p>
+	<p>3. KNN</p>
+	<p>4. CNN</p>
+	<p>5. Naive Bayes</p>
+</body>
+</html>
